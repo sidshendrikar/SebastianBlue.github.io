@@ -85,6 +85,20 @@ function loadSmallPage(page, pageElement) {
 }
 
 
+var flipbook = $('.flipbook');
+
+$(window).on('keydown', function (e) {
+
+    var key = e.which || e.keyCode;
+
+    if (key == 39) {
+        flipbook.turn("next");
+    } else if (key == 37) {
+        flipbook.turn("previous");
+    }
+});
+
+
 
 // http://code.google.com/p/chromium/issues/detail?id=128488
 function isChrome() {
