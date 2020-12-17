@@ -36,11 +36,11 @@ body{
 }
 
 .flipbook .page{
-	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
-	-moz-box-shadow:0 0 20px rgba(0,0,0,0.2);
-	-ms-box-shadow:0 0 20px rgba(0,0,0,0.2);
-	-o-box-shadow:0 0 20px rgba(0,0,0,0.2);
-	box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 0 10px rgba(0,0,0,0.2);
+	-ms-box-shadow:0 0 10px rgba(0,0,0,0.2);
+	-o-box-shadow:0 0 10px rgba(0,0,0,0.2);
+	box-shadow:0 0 10px rgba(0,0,0,0.2);
 }
 
 .flipbook-viewport .page img{
@@ -59,9 +59,9 @@ body{
 	-o-transition: -webkit-box-shadow 0.5s;
 	-ms-transition: -ms-box-shadow 0.5s;
 
-	-webkit-box-shadow:0 0 20px #ccc;
-	-moz-box-shadow:0 0 20px #ccc;
-	-o-box-shadow:0 0 20px #ccc;
-	-ms-box-shadow:0 0 20px #ccc;
-	box-shadow:0 0 20px #ccc;
+	-webkit-box-shadow:0 0 10px #ccc;
+	-moz-box-shadow:0 0 10px #ccc;
+	-o-box-shadow:0 0 10px #ccc;
+	-ms-box-shadow:0 0 10px #ccc;
+	box-shadow:0 0 10px #ccc;
 }
