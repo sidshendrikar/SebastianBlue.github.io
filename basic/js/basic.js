@@ -93,6 +93,8 @@ $(window).on('keydown', function (e) {
 
     if (key == 39) {
         flipbook.turn("next");
+    } if (key == 32) {
+    	flipbook.turn("next");
     } else if (key == 37) {
         flipbook.turn("previous");
     }
