@@ -1,26 +1,139 @@
-<html>
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-<script type="text/javascript" src="./lib/extras/jquery.min.1.7.js"></script>
-<script type="text/javascript" src="./lib/extras/modernizr.2.5.3.min.js"></script>
-<script type="text/javascript" src="./lib/turn.min.js"></script>
-</head>
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<script type="text/javascript" src="../lib/extras/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="../lib/extras/modernizr.2.5.3.min.js"></script>
+<!-- ><script type="text/javascript" src="./lib/turn.min.js"></script> --> 
+
+<style type ="text/css" >
+
+@font-face {
+  font-family: 'Alegreya Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/alegreyasans/v13/5aUo9_-1phKLFgshYDvh6Vwt7V9VBEhGiU9GmRGyBQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+   .footer{ 
+       position: fixed;     
+       text-align: center;    
+       bottom: 20px; 
+       width: 100%;
+       color:white
+   }  
+</style>
+
 <body>
-<div id="flipbook">
-	<div class="hard"> Turn.js </div>
-	<div class="hard"></div>
-	<div> Page 1 </div>
-	<div> Page 2 </div>
-	<div> Page 3 </div>
-	<div> Page 4 </div>
-	<div class="hard"></div>
-	<div class="hard"></div>
+
+	<link rel="stylesheet" src="./css/basic.css">
+	
+	<style>
+a:active {
+  color:white;
+}
+a:visited {
+  color:white;
+}
+
+h2 {
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Ok';
+  src: local("./fonts/Ok.otf") format('otf');
+}
+
+#flipbook .hard {
+  background: #ccc !important;
+  color: #333;
+  -webkit-box-shadow: inset 0 0 5px #666;
+  -moz-box-shadow: inset 0 0 5px #666;
+  -o-box-shadow: inset 0 0 5px #666;
+  -ms-box-shadow: inset 0 0 5px #666;
+  box-shadow: inset 0 0 5px #666;
+  font-weight: bold;
+}
+
+</style>
+  <h2><a style="text-decoration:none" href="https://TheJaguardian.org">Return to The Jaguardian</a></h2>
+
+
+
+<div class="flipbook-viewport">
+	<div class="container">
+		<div class="flipbook">
+			<div style="background-image:url(pages/1.jpg)"></div>
+			<div style="background-image:url(pages/2.jpg)"></div>
+			<div style="background-image:url(pages/3.jpg)"></div>
+			<div style="background-image:url(pages/4.jpg)"></div>
+			<div style="background-image:url(pages/5.jpg)"></div>
+			<div style="background-image:url(pages/6.jpg)"></div>
+			<div style="background-image:url(pages/7.jpg)"></div>
+			<div style="background-image:url(pages/8.jpg)"></div>
+			<div style="background-image:url(pages/9.jpg)"></div>
+			<div style="background-image:url(pages/10.jpg)"></div>
+			<div style="background-image:url(pages/11.jpg)"></div>
+			<div style="background-image:url(pages/12.jpg)"></div>
+		</div>
+	</div>
 </div>
+
+
 <script type="text/javascript">
-	$("#flipbook").turn({
-		width: 400,
-		height: 300,
-		autoCenter: true
+
+function loadApp() {
+
+	// Create the flipbook
+
+	$('.flipbook').turn({
+			// Width
+
+			width:922,
+			
+			// Height
+
+			height:600,
+
+			// Elevation
+
+			elevation: 50,
+			
+			// Enable gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: true
+
 	});
+}
+
+// Load the HTML4 version if there's not CSS transform
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['../lib/turn.js'],
+	nope: ['../lib/turn.html4.min.js'],
+	both: ['css/basic.css'],
+	complete: loadApp
+});
+
 </script>
+
+<script type="text/javascript" src="./js/basic.js"></script>
+
+<div class="footer">
+<h4><a style="text-decoration:none" href="https://TheJaguardian.org">Jagazine Archives</a></h4>
+</div>
+
 </body>
 </html>
