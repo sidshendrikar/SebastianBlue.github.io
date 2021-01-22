@@ -234,6 +234,24 @@ yepnope({
 	complete: loadApp
 });
 
+}
+
+
+var flipbook = $('.flipbook');
+
+$(window).on('keydown', function (e) {
+
+    var key = e.which || e.keyCode;
+
+    if (key == 39) {
+        flipbook.turn("next");
+    } if (key == 32) {
+    	flipbook.turn("next");
+    } else if (key == 37) {
+        flipbook.turn("previous");
+    }
+});
+	
 </script>
 
 <script type="text/javascript" src="js/basic.js"></script>
