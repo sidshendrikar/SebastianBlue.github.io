@@ -164,7 +164,7 @@ a:visited {
 <div>
   <h2><a style="text-decoration:none; float: left; margin-left: 45px; font-size: 15px;" href="https://TheJaguardian.org"><i class="arrow left"></i>Return to The Jaguardian</a></h2>
 </div>
-<a style="text-decoration:none; margin-right: 45px; float: right;" href="https://TheJaguardian.org">Jagazine Archives</a>
+<a style="text-decoration:none; margin-right: 45px; float: right;" href="#">Jagazine Archives (Not Available Yet)</a>
 
 
 <div style = "padding-top: 20px; padding-bottom: 350px;">
@@ -234,6 +234,24 @@ yepnope({
 	complete: loadApp
 });
 
+}
+
+
+var flipbook = $('.flipbook');
+
+$(window).on('keydown', function (e) {
+
+    var key = e.which || e.keyCode;
+
+    if (key == 39) {
+        flipbook.turn("next");
+    } if (key == 32) {
+    	flipbook.turn("next");
+    } else if (key == 37) {
+        flipbook.turn("previous");
+    }
+});
+	
 </script>
 
 <script type="text/javascript" src="js/basic.js"></script>
